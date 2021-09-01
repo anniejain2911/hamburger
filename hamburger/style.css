@@ -1,0 +1,343 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans HK';
+    line-height: 1.4;
+}
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+#showcase{
+    background: linear-gradient(rgba(10, 10, 10, 0.5) ,rgba(26, 25, 25, 0.5)),url('bgg.jpeg') no-repeat;
+    color:white;
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+    width: 100%;
+    position: relative;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-shadow: black 2px;
+}
+.container p{
+    padding: 0 10px;
+}
+.container h1{
+    padding: 10px;
+    text-shadow: black 2px 1px;
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.container h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color:burlywood;
+    font-weight: bolder;
+    text-shadow:black 2px 1px;
+}
+.btn{
+    background: black;
+    padding: 10px 10px;
+    color: white;
+    text-shadow: black;
+    text-decoration: none;
+    transition: all 0.7s ease-in;
+    margin-top: 30px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menu-wrap .toggler
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2 ;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+.menu-wrap .hamburger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+
+}
+.menu-wrap .hamburger> div{
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+.menu-wrap .hamburger > div::before{
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: inherit;
+    color: ivory;
+}
+.menu-wrap .hamburger > div::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    height: 2px;
+    width: 100%;
+    background: inherit;
+    color: ivory;
+}
+.menu-wrap .toggler:checked + .hamburger>div{
+    transform: rotate(135deg);
+}
+.menu-wrap .toggler:checked + .hamburger>div::before,
+.menu-wrap .toggler:checked + .hamburger>div::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+.menu-wrap .toggler:checked:hover + .hamburger>div{
+    transform: rotate(225deg);
+}
+.menu-wrap .toggler:checked ~ .menu{
+    visibility: visible;
+
+}
+.menu-wrap .toggler:checked ~ .menu>div{
+    transform: scale(1);
+    transition-duration: 1s;
+}
+.menu-wrap .toggler:checked ~ .menu>div>div{
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+}
+.menu-wrap .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-wrap .menu> div{
+    background: rgba(10, 9, 9, 0.904);
+    width: 300vw;
+    height: 300vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+}        
+.menu-wrap .menu >div>div{
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.menu ul li{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    text-shadow: black 2px 2px;
+}
+.menu ul li a:hover{
+    color:burlywood;
+}
+.sec1{
+    background:url('coffee2.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+.info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:500px ;
+    text-align: center;
+}
+.info h3{
+    font-weight: bolder;
+    font-size: 30px;
+    font-family:in;
+    border-bottom: palevioletred solid 2px;
+}
+
+.info h6{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.img{
+    background:url('bg2.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 50%;
+    margin-top: 30px;
+}
+.img ul {
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+   
+    line-height: 1.5;
+}
+.img ul li{
+    line-height: 2em;
+    font-size: inherit;
+    text-shadow: lightcoral 1px 1px;
+}
+
+
+    
+
+ 
+ .bean{
+     background: url('beans.jpeg') no-repeat;
+     background-position: center;
+     background-size: cover;
+     height: 400px;
+     width: 100%;
+ }
+ .div2{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     text-align: center;
+     justify-content: center;
+     height: 400px;
+     margin-left: 40px;
+ }
+ .div2 h2{
+     font-size: 40px;
+     text-shadow:pink 1px 1px;
+     font-weight: bolder;
+ }
+ .div2 p{
+     margin-top: 20px;
+     font-size: 18px;
+ }
+ .div2 i{
+     padding: 20px 20px;
+     color: black;
+ }
+ .header{
+     height: 200px;
+     width: 100%;
+     background-color: blanchedalmond;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .header h1{
+     font-weight: 900;
+     font-family: monospace;
+     font-size: 45px;
+ }
+ .header i{
+     padding: 5px 10px;
+     color: chocolate;
+
+ }
+ .flex-items{
+    display: flex;
+    height: 300px;
+    width: 100%;
+ }
+ .c1{
+     background: url('c1.jpeg') no-repeat center center/cover;
+     height: 300px;
+     width: 100%;
+
+ }
+ .c2{
+    background: url('c3.jpeg') no-repeat center center/cover;
+    height: 300px;
+    width: 100%;
+
+}
+.c3{
+    background: url('c4.jpeg') no-repeat center center/cover;
+    height: 300px;
+    width: 100%;
+
+}
+.foot{
+    height: 150px;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    text-align: center;
+}
+.foot .social{
+    padding: 20px 20px;
+    margin: 20px 20px;
+    margin-top: 40px;
+}
+.social a{
+    padding: 5px;
+    color: burlywood;
+}
+ 
+
